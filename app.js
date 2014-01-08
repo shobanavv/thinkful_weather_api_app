@@ -27,7 +27,7 @@ showOutput = function(out) {               //showoutput displays information rec
     contentElem.text(Date(out.currently.time));
     contentElem.append("</br> </br> Temperature : " + out.currently.temperature + "F </br>");
     contentElem.append(" </br> Humidity :  " + out.currently.humidity + "% </br>");
-    contentElem.append(" </br>icon: " + out.currently.icon + "</br>");
+    contentElem.append(" </br>Icon: " + out.currently.icon + "</br>");
     contentElem.append(" </br>Wind Speed: " + out.currently.windSpeed + "mph </br>");
     contentElem.append(" </br>Visibility: " + out.currently.visibility + "m </br>");
     contentElem.append(" </br>pressure: " + out.currently.pressure + "mb");  
@@ -36,7 +36,7 @@ showOutput = function(out) {               //showoutput displays information rec
 
 getForecast = function(data) {
     $("#message").empty();
-    $("#city-name").text("Current weather in" + data.results[0].address_components[0].long_name);       //Output city name.
+    $("#city-name").text("Current weather in " + data.results[0].address_components[0].long_name);       //Output city name.
     console.log(data);
     url2 = 'https://api.forecast.io/forecast/73ae89cc503818fc307b31e9445b5a47/' + data.results[0].geometry.location.lat +',' + data.results[0].geometry.location.lng;
     
